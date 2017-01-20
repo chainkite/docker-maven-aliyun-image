@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+
+  <mirrors>
+    <mirror>
+      <id>aliyun-nexus-thirdparty</id>
+      <mirrorOf>thirdparty</mirrorOf>
+      <name>Aliyun Nexus thirdparty</name>
+      <url>http://maven.aliyun.com/nexus/content/repositories/thirdparty/</url>
+    </mirror>
+    <mirror>
+      <id>aliyun-nexus</id>
+      <mirrorOf>central</mirrorOf>
+      <name>Aliyun Nexus</name>
+      <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+    </mirror>
+  </mirrors>
+
+  <profiles>
+    <profile>
+      <id>maven</id>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>central</id>
+          <url>http://repo.maven.apache.org/maven2/</url>
+          <snapshots><enabled>false</enabled></snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+
+  <activeProfiles>
+    <activeProfile>maven</activeProfile>
+  </activeProfiles>
+  
+  <pluginGroups>
+  <pluginGroup>org.apache.tomcat.maven</pluginGroup>
+  </pluginGroups>
+</settings>
